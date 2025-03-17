@@ -42,14 +42,18 @@ function QuestionTypeChoices({
                 value={selectedChoice}
                 onChange={(e) => setSelectedChoice(e.target.value)}
             >
-                {choices.map((choice, index) => (
-                    <FormControlLabel
-                        key={index}
-                        value={choice}
-                        control={<Radio />}
-                        label={choice}
-                    />
-                ))}
+                {choices.map((choice, index) => {
+                    if (choice)
+                        return (
+                            <FormControlLabel
+                                key={index}
+                                value={choice}
+                                control={<Radio />}
+                                label={choice}
+                            />
+                        );
+                    else return;
+                })}
             </RadioGroup>
         </div>
     );
