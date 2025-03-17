@@ -15,10 +15,10 @@ export const Navbar = () => {
                         return <NavbarLinks key={link.id} {...link} />;
                     })}
                 </ul>
-                <Button className="!justify-start">
+                <Button className="!justify-start max-sm:!p-2">
                     <span className="flex gap-2 items-center">
                         <LogoutIcon />
-                        <span className="text-[14px]  font-[500] text-main  max-sm:!p-2 max-sm:hidden">
+                        <span className="text-[14px]  font-[500] text-main   max-sm:hidden">
                             Log out
                         </span>
                     </span>
