@@ -8,7 +8,7 @@ export const Navbar = () => {
         <Fragment>
             <div className="menu sm:w-[278px] w-[62px] overflow-hidden h-screen flex flex-col justify-between py-6 relative bg-white border-e px-[15px]">
                 <ul className="flex flex-col items-start gap-[10px] ">
-                    <li className="text-mainBlue font-bold text-lg ps-4 max-sm:overflow-hidden">
+                    <li className="text-mainBlue font-bold text-lg ps-4 max-sm:hidden">
                         logo
                     </li>
                     {navbarArray.map((link) => {
