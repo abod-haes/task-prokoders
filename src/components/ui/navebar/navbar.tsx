@@ -18,7 +18,7 @@ export const Navbar = () => {
                 <Button className="!justify-start">
                     <span className="flex gap-2 items-center">
                         <LogoutIcon />
-                        <span className="text-[14px]  font-[500] text-main max-sm:hidden">
+                        <span className="text-[14px]  font-[500] text-main  max-sm:p-2 max-sm:hidden">
                             Log out
                         </span>
                     </span>
