@@ -13,7 +13,7 @@ export default function QuestionsPage() {
             {questions.length === 0 ? (
                 <p>No questions available. Add some!</p>
             ) : (
-                <div className="gap-4 grid grid-cols-3">
+                <div className="gap-4 grid lg:grid-cols-3 grid-cols-1">
                     {questions.map((q) => (
                         <QuestionCard {...q} key={q.id} />
                     ))}

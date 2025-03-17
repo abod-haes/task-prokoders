@@ -17,7 +17,7 @@ function QuestionTypeChoices({
     return (
         <div className="flex flex-col gap-3 ">
             <h3 className="text-lg font-medium">Add Choices:</h3>
-            <div className="grid grid-cols-4 gap-4">
+            <div className="grid lg:grid-cols-4 grid-cols-2 gap-4">
                 {choices.map((choice, index) => (
                     <Input
                         key={index}
