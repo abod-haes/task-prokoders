@@ -18,18 +18,22 @@ function QuestionTypeChoices({
         <div className="flex flex-col gap-3 ">
             <h3 className="text-lg font-medium">Add Choices:</h3>
             <div className="grid lg:grid-cols-4 grid-cols-2 gap-4">
-                {choices.map((choice, index) => (
-                    <Input
-                        key={index}
-                        name={index.toString()}
-                        value={choice}
-                        onChange={(e) => {
-                            const newChoices = [...choices];
-                            newChoices[index] = e.target.value;
-                            setChoices(newChoices);
-                        }}
-                    />
-                ))}
+                {choices.map((choice, index) => {
+                    if (choice)
+                        return (
+                            <Input
+                                key={index}
+                                name={index.toString()}
+                                value={choice}
+                                onChange={(e) => {
+                                    const newChoices = [...choices];
+                                    newChoices[index] = e.target.value;
+                                    setChoices(newChoices);
+                                }}
+                            />
+                        );
+                    return;
+                })}
                 <Button
                     onClick={() => setChoices([...choices, ""])}
                     className="w-fit"
